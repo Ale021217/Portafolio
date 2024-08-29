@@ -1,0 +1,334 @@
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo del encabezado */
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-link {
+    color: #fff; /* Texto blanco por defecto */
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: none; /* Elimina cualquier transición */
+}
+
+.nav-link:hover {
+    color: #fff; /* Mantener texto blanco en hover */
+    background-color: transparent; /* Elimina el fondo en hover */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00BFFF; /* Línea azul */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease; /* Transición solo para la línea */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Estilos para la sección de bienvenida */
+.welcome-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+h1.display-4 {
+    font-size: 3rem;
+}
+
+p.lead {
+    font-size: 1.5rem;
+}
+
+#contact-link {
+    color: #000000; /* Texto blanco en el botón */
+    background-color: #ffffff; /* Fondo azul del botón */
+    border-color: #000000; /* Borde azul del botón */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact-link:hover {
+    color: #fff; /* Mantener texto blanco en hover */
+    background-color: #000000; /* Fondo azul más oscuro en hover */
+    border-color: #000000; /* Borde azul más oscuro en hover */
+}
+
+.button-and-social .btn-outline-primary {
+    color: #000000; /* Texto azul */
+    border-color: #000000; /* Borde azul */
+}
+
+.button-and-social .btn-outline-primary:hover {
+    color: #fff; /* Texto blanco en hover */
+    background-color: #000000; /* Fondo azul en hover */
+    border-color: #000000; /* Borde azul en hover */
+}
+
+.social-icons a {
+    color: #333; /* Color de los iconos */
+    transition: color 0.3s ease;
+    margin: 0 10px;
+    font-size: 2rem;
+}
+
+
+
+/* Estilos para la sección Sobre Mí */
+#about {
+    margin-top: 100px;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    padding-top: calc(2rem + 60px); /* Ajusta 60px según la altura de tu encabezado */
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center;
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+
+#about img {
+    max-width: 63%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes ligeramente redondeados */
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #333; /* Color del título */
+}
+
+#about p.lead {
+    font-size: 1.25rem;
+    color: #555; /* Color del texto principal */
+}
+
+#about p {
+    color: #666; /* Color del texto secundario */
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 1rem 0; /* Menos espaciado en pantallas pequeñas */
+    }
+
+    .image-wrapper {
+        margin-bottom: 1rem; /* Espacio debajo de la imagen */
+    }
+}
+
+.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem; /* Espacio entre los proyectos */
+    padding: 1rem 0;
+}
+
+.project-item {
+    flex: 0 0 auto; /* Evita que los elementos se estiren */
+    width: 100%; /* Ajusta el ancho de los elementos, puedes cambiar este valor si quieres que los proyectos sean más anchos o más estrechos */
+    max-width: 300px; /* Controla el ancho máximo de cada proyecto */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s; /* Agrega una transición para el hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    margin: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #000000;
+    border: none;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta ligeramente al pasar el ratón por encima */
+}
+
+.education-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .education-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #007BFF;
+    padding-bottom: 10px;
+  }
+  
+  .education-item h3,
+  .certification-item h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+  }
+  
+  .education-item .date,
+  .certification-item .date {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .skills-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #007BFF;
+    padding-bottom: 10px;
+  }
+  
+  .skill-category h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+  }
+  
+  .skill-category ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .skill-category ul li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .skill-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #007BFF;
+    padding-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #007BFF;
+  }
+  
+  .contact-info .mt-4 {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  footer {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+    
